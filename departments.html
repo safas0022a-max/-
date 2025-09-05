@@ -106,7 +106,7 @@
       margin-top: 30px;
     }
 
-    /* Media Query للجوال فقط */
+    /* Media Query للجوال */
     @media (max-width: 600px) {
       .overlay {
         padding: 15px;
@@ -118,7 +118,7 @@
       }
 
       .dept-box {
-        width: 100%; /* يغطي الشاشة تقريبًا */
+        width: 100%;
         max-width: none;
         height: auto;
         padding: 15px;
@@ -135,6 +135,11 @@
       .dept-contact {
         font-size: 13px;
       }
+
+      .dept-contact img {
+        width: 20px;
+        height: 20px;
+      }
     }
   </style>
 </head>
@@ -148,7 +153,7 @@
 
   <div class="overlay">
     <div class="departments-container">
-      <!-- هنا جميع الأقسام مع الإيميلات كما في كودك الأصلي -->
+      <!-- الأقسام مع الإيميلات -->
       <div class="dept-box">
         <div class="dept-code">IT</div>
         <div class="dept-name">تقنية المعلومات</div>
@@ -309,12 +314,13 @@
           Has-ortho-den-c@moh.gov.sa
         </div>
       </div>
+
     </div>
   </div>
 
   <footer>
-   
-  </footer>
+
+</footer>
 
 </body>
 </html>
