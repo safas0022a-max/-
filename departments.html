@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>أقسام المركز</title>
   <style>
+    /* تحسين القياس على الجوال */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       font-family: 'Tahoma', sans-serif;
       margin: 0;
@@ -31,20 +36,21 @@
 
     .overlay {
       flex: 1;
-      padding: 40px 20px;
+      padding: 24px 16px;
     }
 
     .departments-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 15px;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
     }
 
     .dept-box {
       background: #ffffff;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.3s, background 0.3s;
@@ -52,9 +58,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 15px;
-      box-sizing: border-box;
-      word-break: break-word;
+      padding: 16px;
+      width: 100%;
     }
 
     .dept-box:hover {
@@ -63,37 +68,43 @@
     }
 
     .dept-code {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: bold;
       color: #666;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .dept-name {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
       margin-bottom: 8px;
       color: #004d80;
     }
 
     .dept-contact {
-      font-size: 12px;
+      font-size: 13px;
       color: #333;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 6px;
       text-align: center;
       flex-wrap: wrap;
+      overflow-wrap: anywhere; /* يكسر الإيميل على أسطر بالجوال */
     }
 
     .dept-contact img {
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       object-fit: contain;
     }
 
-    /* الفوتر */
+    .dept-contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .dept-contact a:hover { text-decoration: underline; }
+
     footer {
       background: #0b5885;
       color: #fff;
@@ -104,27 +115,13 @@
       margin-top: 30px;
     }
 
-    /* Media Query للجوال */
+    /* الجوال */
     @media (max-width: 600px) {
-      .overlay {
-        padding: 15px;
-      }
-
-      .departments-container {
-        grid-template-columns: 1fr; /* خانة واحدة لكل صف */
-        gap: 10px;
-      }
-
-      .dept-box {
-        width: 100%;
-        height: auto;
-        padding: 15px;
-      }
-
+      .departments-container { grid-template-columns: 1fr; gap: 12px; }
       .dept-name { font-size: 16px; }
       .dept-code { font-size: 14px; }
-      .dept-contact { font-size: 13px; }
-      .dept-contact img { width: 18px; height: 18px; }
+      .dept-contact { font-size: 14px; }
+      .dept-contact img { width: 20px; height: 20px; }
     }
   </style>
 </head>
@@ -138,111 +135,192 @@
 
   <div class="overlay">
     <div class="departments-container">
+
       <div class="dept-box">
         <div class="dept-code">IT</div>
         <div class="dept-name">تقنية المعلومات</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">Has-it-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:Has-it-den-c@moh.gov.sa">Has-it-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">DEN-C</div>
         <div class="dept-name">مدير مركز طب الأسنان</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">den-c-hail@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:den-c-hail@moh.gov.sa">den-c-hail@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">HR</div>
         <div class="dept-name">الموارد البشرية</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">Has-hr-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:Has-hr-den-c@moh.gov.sa">Has-hr-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">REC</div>
         <div class="dept-name">السجلات الطبية</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">Has-rec-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:Has-rec-den-c@moh.gov.sa">Has-rec-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">IC</div>
         <div class="dept-name">مكافحة العدوى</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">N4-den-ic@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:N4-den-ic@moh.gov.sa">N4-den-ic@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">OPD</div>
         <div class="dept-name">ادارة العيادات</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">Has-opd-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:Has-opd-den-c@moh.gov.sa">Has-opd-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">MD</div>
         <div class="dept-name">الإدارة الطبية</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-Md-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-Md-den-c@moh.gov.sa">has-Md-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">CSSD</div>
         <div class="dept-name">التعقيم</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-cssd-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-cssd-den-c@moh.gov.sa">has-cssd-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">RSTO</div>
         <div class="dept-name">إصلاح الأسنان</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-rsto-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-rsto-den-c@moh.gov.sa">has-rsto-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">ENDO</div>
         <div class="dept-name">علاج الجذور وعصب الأسنان</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-endo-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-endo-den-c@moh.gov.sa">has-endo-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">DS</div>
         <div class="dept-name">إدارة مساعدين الأطباء</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-ds-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-ds-den-c@moh.gov.sa">has-ds-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">RAD</div>
         <div class="dept-name">الأشعة</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-rad-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-rad-den-c@moh.gov.sa">has-rad-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">FMS</div>
         <div class="dept-name">إدارة المرافق والسلامة</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-fms-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-fms-den-c@moh.gov.sa">has-fms-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">PROS</div>
         <div class="dept-name">الاستعاضة السنية</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-pros-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-pros-den-c@moh.gov.sa">has-pros-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">PRDIA</div>
         <div class="dept-name">طب أسنان أطفال</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">mas-pedia-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:mas-pedia-den-c@moh.gov.sa">mas-pedia-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">QDH</div>
         <div class="dept-name">الجودة</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">quality-den-hail@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:quality-den-hail@moh.gov.sa">quality-den-hail@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">LAB</div>
         <div class="dept-name">المعمل</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">has-lab-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:has-lab-den-c@moh.gov.sa">has-lab-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">STAT</div>
         <div class="dept-name">الإحصاء</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">dent-stat-hail@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:dent-stat-hail@moh.gov.sa">dent-stat-hail@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">SSIT</div>
         <div class="dept-name">بريد المستودع</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">Has-ssit-sply@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:Has-ssit-sply@moh.gov.sa">Has-ssit-sply@moh.gov.sa</a>
+        </div>
       </div>
+
       <div class="dept-box">
         <div class="dept-code">ORTHO</div>
         <div class="dept-name">التقويم</div>
-        <div class="dept-contact"><img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">Has-ortho-den-c@moh.gov.sa</div>
+        <div class="dept-contact">
+          <img src="https://img.icons8.com/ios-filled/50/004d80/new-post.png" alt="email">
+          <a href="mailto:Has-ortho-den-c@moh.gov.sa">Has-ortho-den-c@moh.gov.sa</a>
+        </div>
       </div>
+
     </div>
   </div>
 
   <footer>
-  
+ 
   </footer>
 
 </body>
