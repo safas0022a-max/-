@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نبذة عن المركز | مركز طب الأسنان</title>
+
+  <!-- خط -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6f9fb;
+      --surface:#ffffff;
+      --ink:#0e2f3a;
+      --sub:#5c6b73;
+      --brand:#178c8c;
+      --brand-2:#23a6a6;
+      --border:#e6eef2;
+      --radius:16px;
+      --shadow:0 6px 20px rgba(0,0,0,.06);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Cairo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #f4fbfd 0%, #eaf5fb 100%);
+      color:var(--ink);
+      line-height:1.8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container{max-width:var(--max); margin-inline:auto; padding:32px 20px; flex:1}
+
+    /* الهيدر */
+    header {
+     background: #0b5885;
+      color: #fff;
+      padding:18px 28px;
+      text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+    header .logo { font-size:22px; font-weight:700; display:inline-block; }
+
+    /* قسم شهادة سباهي */
+    #cbahi {
+      text-align: center;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    #cbahi .cba-heading {
+      margin: 0 0 12px;
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 700;
+      color: var(--ink);
+    }
+    #cbahi .cba-img {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto 22px;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(0,0,0,.06);
+      background: #fff;
+    }
+    #cbahi .cba-text {
+      color: #333;
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.9;
+      font-size: 16px;
+      text-align: justify;
+      font-weight: 500;
+    }
+    #cbahi .cba-badge {
+      background: linear-gradient(135deg, #e8fbfb, #f2ffff);
+      border: 1px dashed var(--brand-2);
+      border-radius: 12px;
+      font-weight: 700;
+      padding: 14px 18px;
+      display: inline-block;
+      margin: 0 auto 26px;
+      color: #0b3a3a;
+      font-size: 16px;
+    }
+
+    /* فاصل */
+    .divider{height:1px; background:var(--border); margin:38px 0}
+
+    /* رؤية الإدارة */
+    .section-title{ margin:0 0 18px; font-size:clamp(18px, 2.8vw, 26px); font-weight:700; text-align:center; color:var(--ink); }
+    .team{ display:grid; gap:22px; }
+    .profile{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      min-height:220px;
+    }
+    .profile .photo{ position:relative; background:#f9fdfd; }
+    .profile .photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .profile .info{ padding:22px; display:flex; flex-direction:column; justify-content:center; gap:8px; }
+    .name{margin:0; font-size:clamp(18px,2.6vw,24px); font-weight:700; color:var(--ink)}
+    .role{
+      margin:0;
+      color:var(--brand);
+      font-weight:700;
+      font-size:17px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .badge {
+  display: block;             /* يخليه سطر جديد */
+  background: #e6f8f9;
+  color: #0a5d7c;
+  border: 1px solid #b7e3e5;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  margin-top: 4px;
+  width: fit-content;         /* قد النص */
+}
+    .mission{margin:6px 0 0; color:var(--sub); font-size:15px}
+    .bullets{margin:10px 0 0; padding:0 20px; color:var(--sub); font-size:15px}
+    .bullets li{margin:4px 0}
+    @media (max-width: 900px){
+      .profile{grid-template-columns:1fr}
+      .profile .photo{height:220px}
+    }
+
+    /* زر العودة */
+    .back-btn{
+      display:inline-block;
+      margin:40px auto 10px;
+      padding:10px 24px;
+      background: #0b5885;
+      color: #fff;
+
+      text-decoration:none;
+      border-radius:8px;
+      font-size:15px;
+      transition:.3s;
+    }
+    .back-btn:hover{background:#09495f;}
+
+    /* الفوتر */
+    footer{
+     background: #0b5885;
+      color: #fff;
+      text-align:center;
+      padding:14px;
+      font-size:14px;
+      margin-top:auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header>
+    <div class="logo">🏥 نبذة عن مركز طب الأسنان</div>
+  </header>
+
+  <main class="container">
+    <!-- 1) شهادة سباهي -->
+    <section id="cbahi">
+      <div class="cba-badge">
+        أول مركز طب أسنان تخصصي حكومي في المملكة العربية السعودية يحصل على شهادة اعتماد المركز السعودي للمنشآت الصحيّة (CBAHI).
+      </div>
+      <img class="cba-img" src="images/شهادة اعتماد سباهي.jpg" alt="شهادة اعتماد CBAHI للمركز">
+      <p class="cba-text">
+        مركز طب الأسنان التخصصي الحكومي بحائل يعد الرائد في تقديم خدمات الرعاية الصحية المتخصصة في طب الفم والأسنان، حيث يضم كوادر مؤهلة وتجهيزات متقدمة تسهم في رفع مستوى جودة الخدمات المقدمة للمستفيدين.
+        <br><br>
+        وقد حقق المركز إنجازاً نوعياً بكونه أول مركز طب أسنان تخصصي في المملكة يحصل على شهادة اعتماد المركز السعودي للمنشآت الصحية (CBAHI)، بعد اجتيازه متطلبات ومعايير الجودة الوطنية عقب الزيارة التقييمية بتاريخ 5 يناير 2025م.
+        <br><br>
+        وبموجب هذا الإنجاز، منح المركز شهادة الاعتماد لمدة ثلاث سنوات حتى يناير 2028م، ليواصل مسيرته في تقديم خدمات علاجية وتثقيفية للمجتمع.
+      </p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- 2) رؤية وأهداف الإدارة -->
+    <section aria-labelledby="vision-title">
+      <h2 id="vision-title" class="section-title">رؤية وأهداف إدارة طب الأسنان</h2>
+      <div class="team">
+        <!-- بطاقة 1 -->
+        <article class="profile">
+          <div class="photo">
+            <img src="images/محمد الحميد.jpg" alt="صورة د. محمد — المدير الطبي">
+          </div>
+          <div class="info">
+            <h3 class="name">د. محمد عيسى الحميد</h3>
+            <p class="role">
+              مدير ادارة طب الأسنان بتجمع حائل الصحي</p>
+              <span class="badge">استشاري اصلاح وتجميل الأسنان</span>
+            
+            <p class="mission">
+             يسعدني أن أرحب بكم في مركز طب الأسنان ونسعى في مركزنا إلى تقديم أفضل الخدمات العلاجية والوقائية بأعلى معايير الجودة وسلامة المرضى، وذلك بدعم كادر مؤهل وتجهيزات متقدمة.
+            </p>
+
+
+  <ul class="bullets">
+              <li>رؤيتنا أن نكون المرجع الأول في طب الأسنان       </li>
+              <li> مصدر ثقة لمجتمعنا وشركائنا في القطاع الصحي</li>
+              <li>    الحرص على التطوير المستمر والابتكار في الخدمات</li>
+            </ul>
+
+          </div>
+        </article>
+
+        <!-- بطاقة 2 -->
+        <article class="profile">
+          <div class="photo">
+            <img src="images/صوره د ابتسام العديلي.jpg" alt="صورة د. ابتسام ">
+          </div>
+          <div class="info">
+            <h3 class="name">د. ابتسام عبدالله العديلي</h3>
+
+
+
+            <p class="role">
+              مديرة مركز طب الأسنان التخصصي بحائل</p>
+              <span class="badge">استشارية طب الأطفال</span>
+
+            <p class="mission">
+              نلتزم بتجربة علاجية إنسانية وفعّالة عبر تحسين مسار المريض من الحجز حتى المتابعة، وبالتكامل مع فرقنا متعددة التخصصات.
+            </p>
+            <ul class="bullets">
+              <li>هدفنا تحسين رحلة المريض وتجربة العيادة.</li>
+              <li>متابعة مؤشرات الأداء السريرية.</li>
+              <li>التواصل الفعّال مع فرق الدعم والتشغيل.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- زر العودة -->
+    <div style="text-align:center;">
+      <a href="index.html" class="back-btn">العودة للصفحة الرئيسية</a>
+    </div>
+  </main>
+
+  <!-- الفوتر -->
+  <footer>
+  
+
+  </footer>
+
+  <script>
+    document.documentElement.style.scrollBehavior = 'smooth';
+  </script>
+</body>
+</html>

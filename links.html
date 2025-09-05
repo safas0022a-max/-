@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>روابط مركز طب الأسنان</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      background: linear-gradient(135deg, #f7f9fc, #d6eaf8);
+      color: #333;
+    }
+
+    .overlay {
+      padding: 40px;
+      flex: 1;
+    }
+
+    .header-bar {
+      background-color: #0b5885;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .links-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .link-box {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .link-box:hover {
+      transform: scale(1.05);
+      background: #f0f8ff;
+    }
+
+    .link-box img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0b5885;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+      margin-top: 30px; /* يظهر بعد المحتوى */
+    }
+
+    @media (max-width: 600px) {
+      .links-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 20px 10px;
+      }
+
+      .link-box img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .link-box p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-bar">📌 روابط مركز طب الأسنان</div>
+
+  <div class="overlay">
+    <div class="links-container">
+
+      <a href="https://app-prod.cloud.asnan.moh.gov.sa/" target="_blank">
+        <div class="link-box">
+          <img src="images/Sensei.jpeg" alt="Sensei">
+          <p>شهادة Sensei</p>
+        </div>
+      </a>
+
+      <a href="https://app-prod.cloud.asnan.moh.gov.sa/" target="_blank">
+        <div class="link-box">
+          <img src="images/Sensei.jpeg" alt="Sensei">
+          <p>Sensei Cloud</p>
+        </div>
+      </a>
+
+      <a href="http://10.110.79.166/default.aspx" target="_blank">
+        <div class="link-box">
+          <img src="images/infinitt.webp" alt="Infinitt">
+          <p>Infinitt</p>
+        </div>
+      </a>
+
+      <a href="https://webmail.moh.gov.sa/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.moh.gov.sa%2fowa%2f" target="_blank">
+        <div class="link-box">
+          <img src="images/Outlook.jpg" alt="Outlook">
+          <p>بريد الصحة</p>
+        </div>
+      </a>
+
+      <a href="https://hsp.moh.gov.sa/ResetPassword.aspx" target="_blank">
+        <div class="link-box">
+          <img src="images/Outlook.jpg" alt="Outlook">
+          <p>تحديث البريد</p>
+        </div>
+      </a>
+
+      <a href="https://sso.wasfaty.sa/auth/realms/master/protocol/openid-connect/auth?client_id=CPSSO&redirect_uri=https%3A%2F%2Fcp.wasfaty.sa%2F&state=cd519ef4-2368-4c41-9a78-54c968a45c5b&nonce=d1b805b0-a6f6-47ab-8fe0-4d85d6aa72c1&response_mode=fragment&response_type=code&scope=openid" target="_blank">
+        <div class="link-box">
+          <img src="images/wasfaty.png" alt="Wasfaty">
+          <p>وصفتي</p>
+        </div>
+      </a>
+
+      <a href="https://www.moh.gov.sa/_layouts/15/MOH/SSOLogin.aspx?ReturnUrl=https://www.moh.gov.sa/eServices/cards/Pages/Appointment-Booking-service.aspx" target="_blank">
+        <div class="link-box">
+          <img src="images/Mawid.jpg" alt="Mawid">
+          <p>موعد</p>
+        </div>
+      </a>
+
+      <a href="https://bain.moh.gov.sa/Account/Login?ReturnUrl=%2F" target="_blank">
+        <div class="link-box">
+          <img src="images/BAIN.png" alt="BAIN">
+          <p>بين</p>
+        </div>
+      </a>
+
+      <a href="https://transmoh.com/2017/02/18/%D9%86%D8%B8%D8%A7%D9%85-%D9%85%D9%88%D8%A7%D8%B1%D8%AF-%D9%88%D8%AE%D8%AF%D9%85%D8%A9-%D9%85%D8%AF%D9%8A%D8%B1%D9%8A%E2%80%8B-%D8%B9%D8%A8%D8%B1-%D8%A7%D9%84%D8%A8%D9%88%D8%A7%D8%A8%D8%A9/" target="_blank">
+        <div class="link-box">
+          <img src="images/موارد.webp" alt="موارد">
+          <p>موارد</p>
+        </div>
+      </a>
+
+      <a href="https://systems.moh.gov.sa/" target="_blank">
+        <div class="link-box">
+          <img src="images/احصاء.png" alt="احصاء">
+          <p>الاحصاء</p>
+        </div>
+      </a>
+
+      <a href="https://itsm-sso.moh.gov.sa/" target="_blank">
+        <div class="link-box">
+          <img src="images/شهم.png" alt="شهم">
+          <p>شهم</p>
+        </div>
+      </a>
+
+      <a href="https://www.seha.sa/#/account/login" target="_blank">
+        <div class="link-box">
+          <img src="images/صحة.png" alt="صحة">
+          <p>صحة</p>
+        </div>
+      </a>
+
+      <a href="https://anat.sa/login" target="_blank">
+        <div class="link-box">
+          <img src="images/اناة.png" alt="اناة">
+          <p>اناة</p>
+        </div>
+      </a>
+
+      <a href="https://gdipc.anat.sa/login" target="_blank">
+        <div class="link-box">
+          <img src="images/مكافحة العدوى.jpg" alt="مكافحة العدوى">
+          <p>مكافحة العدوى</p>
+        </div>
+      </a>
+
+      <a href="https://eservices.moh.gov.sa/Nupco" target="_blank">
+        <div class="link-box">
+          <img src="images/نوبكو.jpg" alt="نوبكو">
+          <p>نوبكو</p>
+        </div>
+      </a>
+
+      <a href="https://hos.nupco.com/store/login" target="_blank">
+        <div class="link-box">
+          <img src="images/HOS.jpg" alt="HOS">
+          <p>هوز - HOS</p>
+        </div>
+      </a>
+
+      <a href="https://login.etimad.sa/Account/AgencyLogin" target="_blank">
+        <div class="link-box">
+          <img src="images/اعتماد.jpg" alt="اعتماد">
+          <p>اعتماد</p>
+        </div>
+      </a>
+
+      <a href="https://eservices.taqat.sa/Eservices/Home.aspx" target="_blank">
+        <div class="link-box">
+          <img src="images/هدف.jpg" alt="هدف">
+          <p>هدف</p>
+        </div>
+      </a>
+
+      <a href="https://sso.scfhs.org.sa/Home/Index" target="_blank">
+        <div class="link-box">
+          <img src="images/ممارس.jpg" alt="ممارس">
+          <p>ممارس +</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+   
+
+
+  </footer>
+
+</body>
+</html>

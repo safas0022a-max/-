@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الإدارات والعيادات</title>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(to bottom, #f0f9ff, #e6f0fa);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background: #0b5885;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .search-box {
+      display: flex;
+      justify-content: flex-end; /* يسار في RTL */
+    }
+    .search-box input {
+      padding: 7px 12px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      width: 200px;
+    }
+    section {
+      padding: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #0b5885;
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      font-size: 17px;
+    }
+    th {
+      background: #0b5885;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background: #f9fcff;
+    }
+    tr:hover {
+      background: #e6f3fb;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #0b5885;
+      color: #fff;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- البحث يسار -->
+    <div class="search-box">
+      <input type="text" id="search" placeholder="ابحث هنا...">
+    </div>
+
+    <!-- العنوان بالنص -->
+    <h1>📌 الإدارات والعيادات</h1>
+
+    <!-- يمين فاضي للتوازن -->
+    <div style="width:200px;"></div>
+  </header>
+
+  <!-- جدول الإدارات -->
+  <section>
+    <h2>🏢 الإدارات</h2>
+    <table id="adminTable">
+      <thead>
+        <tr>
+          <th>الإدارة</th>
+          <th>رقم التحويلة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>المدير</td><td>100</td></tr>
+        <tr><td>مساعد المدير</td><td>300</td></tr>
+        <tr><td>سكرتير</td><td>555</td></tr>
+        <tr><td>مدير الموارد البشرية</td><td>444</td></tr>
+        <tr><td>مساعد الموارد البشرية</td><td>445</td></tr>
+        <tr><td>مساعد الموارد البشرية</td><td>443</td></tr>
+        <tr><td>تجربة المستفيد</td><td>135</td></tr>
+        <tr><td>علاقات المرضى</td><td>400</td></tr>
+        <tr><td>المدير الطبي</td><td>600</td></tr>
+        <tr><td>رئيس التمريض</td><td>666</td></tr>
+        <tr><td>رئيس السجلات</td><td>663</td></tr>
+        <tr><td>السجلات الطبية</td><td>668</td></tr>
+        <tr><td>استقبال الرجال</td><td>208</td></tr>
+        <tr><td>المواعيد </td><td>333</td></tr>
+        <tr><td>الملفات</td><td>664</td></tr>
+        <tr><td>الأشعة</td><td>662</td></tr>
+        <tr><td>مكافحة العدوى</td><td>440</td></tr>
+        <tr><td>الجودة</td><td>441</td></tr>
+        <tr><td>التعقيم</td><td>660</td></tr>
+        <tr><td>رئيس المعمل</td><td>220</td></tr>
+        <tr><td>استقبال المعمل</td><td>222</td></tr>
+        <tr><td>غرفة البورسلين</td><td>223</td></tr>
+        <tr><td>الصيانة العامة والطبية</td><td>138</td></tr>
+        <tr><td>التعليم المستمر</td><td>136</td></tr>
+        <tr><td>قاعة الاجتماعات</td><td>226</td></tr>
+        <tr><td>مكتب البورد</td><td>701</td></tr>
+            <tr><td>الأستور</td><td>667</td></tr>
+            <tr><td>التعقيم الطبي</td><td>189</td></tr>
+
+      </tbody>
+    </table>
+  </section>
+
+<!-- جدول العيادات -->
+<section>
+  <h2>🦷 العيادات</h2>
+  <table id="clinicTable">
+    <thead>
+      <tr>
+        <th>اسم العيادة</th>
+        <th>رقم العيادة</th>
+        <th>رقم التحويلة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>عيادة تشخيص نساء</td><td>1</td><td>101</td></tr>
+      <tr><td>عيادة تشخيص رجال</td><td>2</td><td>102</td></tr>
+      <tr><td>عيادة علاج للثة</td><td>3</td><td>103</td></tr>
+      <tr><td>عيادة حشوات</td><td>4</td><td>104</td></tr>
+      <tr><td>عيادة الجراحة</td><td>5</td><td>105</td></tr>
+      <tr><td>عيادة علاج للثة</td><td>6</td><td>106</td></tr>
+      <tr><td>عيادة زراعة</td><td>7</td><td>107</td></tr>
+      <tr><td>عيادة زراعة</td><td>8</td><td>108</td></tr>
+      <tr><td>عيادة بورد</td><td>9</td><td>109</td></tr>
+      <tr><td>عيادة بورد</td><td>10</td><td>110</td></tr>
+      <tr><td>عيادة علاج عصب</td><td>11</td><td>111</td></tr>
+      <tr><td>عيادة بورد</td><td>12</td><td>112</td></tr>
+      <tr><td>عيادة تركيبات</td><td>13</td><td>113</td></tr>
+      <tr><td>عيادة تركيبات</td><td>14</td><td>114</td></tr>
+      <tr><td>عيادة تركيبات متحركة</td><td>15</td><td>115</td></tr>
+      <tr><td>عيادة تركيبات</td><td>16</td><td>116</td></tr>
+      <tr><td>عيادة حشوات وتركيبات</td><td>17</td><td>117</td></tr>
+      <tr><td>عيادة تركيبات</td><td>18</td><td>118</td></tr>
+      <tr><td>عيادة حشوات</td><td>19</td><td>119</td></tr>
+      <tr><td>عيادة علاج عصب</td><td>20</td><td>120</td></tr>
+      <tr><td>عيادة علاج عصب</td><td>21</td><td>121</td></tr>
+      <tr><td>عيادة علاج عصب</td><td>22</td><td>122</td></tr>
+      <tr><td>عيادة علاج عصب</td><td>23</td><td>123</td></tr>
+      <tr><td>عيادة التقويم</td><td>24</td><td>124</td></tr>
+      <tr><td>عيادة التقويم</td><td>25</td><td>125</td></tr>
+      <tr><td>عيادة التقويم</td><td>26</td><td>126</td></tr>
+      <tr><td>عيادة التقويم</td><td>27</td><td>127</td></tr>
+      <tr><td>عيادة بورد</td><td>28</td><td>128</td></tr>
+      <tr><td>عيادة بورد</td><td>29</td><td>129</td></tr>
+      <tr><td>عيادة الاطفال</td><td>30</td><td>130</td></tr>
+      <tr><td>عيادة الاطفال</td><td>31</td><td>131</td></tr>
+      <tr><td>عيادة حشوات</td><td>32</td><td>132</td></tr>
+      <tr><td>عيادة حشوات</td><td>33</td><td>133</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+  <footer>
+   
+                                                              
+  </footer>
+
+  <script>
+    // البحث يفلتر الجدولين
+    document.getElementById("search").addEventListener("keyup", function () {
+      var value = this.value.toLowerCase();
+      ["adminTable", "clinicTable"].forEach(function (id) {
+        var rows = document.querySelectorAll("#" + id + " tbody tr");
+        rows.forEach(function (row) {
+          row.style.display = row.textContent.toLowerCase().includes(value) ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
